@@ -1,38 +1,95 @@
 "use client";
+
+import { useState } from "react";
+
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <main id="top" className="bg-white text-slate-900">
+
       {/* Navbar */}
-      <header className="fixed top-0 left-0 w-full z-50">
-        <nav className="flex items-center justify-between px-6 md:px-16 py-5 text-white backdrop-blur-sm bg-black/20 border-b border-white/10">
-          <a href="#top">
-            <h2 className="text-lg md:text-xl tracking-[0.2em] uppercase font-light hover:text-slate-300 transition">
-              J.W. Holliday & Associates
-            </h2>
-          </a>
+<header className="fixed top-0 left-0 w-full z-50">
 
-          <div className="hidden md:flex gap-10 text-sm uppercase tracking-widest">
-            <a
-              href="#practice-areas"
-              className="hover:text-slate-300 transition"
-            >
-              Practice Areas
-            </a>
+  <nav className="flex items-center justify-between px-6 md:px-16 py-5 text-white backdrop-blur-sm bg-black/20 border-b border-white/10">
 
-            <a href="#about" className="hover:text-slate-300 transition">
-              About
-            </a>
+    {/* Logo */}
+    <a href="#top">
+      <h2 className="text-lg md:text-xl tracking-[0.2em] uppercase font-light hover:text-slate-300 transition">
+        J.W. Holliday & Associates
+      </h2>
+    </a>
 
-            <a href="#industries" className="hover:text-slate-300 transition">
-              Industries
-            </a>
+    {/* Desktop Menu */}
+    <div className="hidden md:flex gap-10 text-sm uppercase tracking-widest">
 
-            <a href="#contact" className="hover:text-slate-300 transition">
-              Contact
-            </a>
-          </div>
-        </nav>
-      </header>
+      <a href="#practice-areas" className="hover:text-slate-300 transition">
+        Practice Areas
+      </a>
+
+      <a href="#about" className="hover:text-slate-300 transition">
+        About
+      </a>
+
+      <a href="#industries" className="hover:text-slate-300 transition">
+        Industries
+      </a>
+
+      <a href="#contact" className="hover:text-slate-300 transition">
+        Contact
+      </a>
+
+    </div>
+
+    {/* Mobile Hamburger */}
+    <button
+      className="md:hidden text-3xl"
+      onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+    >
+      ☰
+    </button>
+
+  </nav>
+
+  {/* Mobile Dropdown */}
+  {mobileMenuOpen && (
+    <div className="md:hidden bg-black/95 backdrop-blur-md text-white px-6 py-8 space-y-6 uppercase tracking-widest text-sm">
+
+      <a
+        href="#practice-areas"
+        className="block"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Practice Areas
+      </a>
+
+      <a
+        href="#about"
+        className="block"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        About
+      </a>
+
+      <a
+        href="#industries"
+        className="block"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Industries
+      </a>
+
+      <a
+        href="#contact"
+        className="block"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Contact
+      </a>
+
+    </div>
+  )}
+
+</header>
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-end bg-slate-950 text-white pb-12 md:pb-16">
