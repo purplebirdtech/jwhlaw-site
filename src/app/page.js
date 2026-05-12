@@ -244,7 +244,7 @@ export default function Home() {
           </div>
 
           {/* <div className="grid md:grid-cols-3 gap-6"> */}
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-3 gap-4">
             {[
               "Financial Institutions",
               "Commercial Lenders",
@@ -258,10 +258,10 @@ export default function Home() {
             ].map((industry) => (
               <div
                 key={industry}
-                className="border border-slate-200 p-8 flex items-center justify-center text-center hover:border-slate-900 hover:-translate-y-1 transition duration-300"
+                className="border border-slate-200 p-6 flex items-center justify-center text-center hover:border-slate-900 hover:-translate-y-1 transition duration-300"
               >
                 {/* <h3 className="text-2xl font-light text-slate-900"> */}
-                <h3 className="text-xl font-light text-slate-900">
+                <h3 className="text-lg xl:text-xl font-light text-slate-900">
                   {industry}
                 </h3>
               </div>
