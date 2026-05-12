@@ -253,6 +253,7 @@ export default function Home() {
               "Healthcare Providers",
               "Automotive Finance",
               "Trade Creditors",
+              "Private Lending",
               "Commercial Services",
             ].map((industry) => (
               <div
