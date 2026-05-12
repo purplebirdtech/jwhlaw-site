@@ -3,101 +3,95 @@
 import { useState } from "react";
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <main id="top" className="bg-white text-slate-900">
-
       {/* Navbar */}
-<header className="fixed top-0 left-0 w-full z-50">
+      <header className="fixed top-0 left-0 w-full z-50">
+        <nav className="flex items-center justify-between px-6 md:px-16 py-5 text-white backdrop-blur-sm bg-black/20 border-b border-white/10">
+          {/* Logo */}
+          <a href="#top">
+            <h2 className="text-lg md:text-xl tracking-[0.2em] uppercase font-light hover:text-slate-300 transition">
+              J.W. Holliday & Associates
+            </h2>
+          </a>
 
-  <nav className="flex items-center justify-between px-6 md:px-16 py-5 text-white backdrop-blur-sm bg-black/20 border-b border-white/10">
+          {/* Desktop Menu */}
+          <div className="hidden md:flex gap-10 text-sm uppercase tracking-widest">
+            <a
+              href="#practice-areas"
+              className="hover:text-slate-300 transition"
+            >
+              Practice Areas
+            </a>
 
-    {/* Logo */}
-    <a href="#top">
-      <h2 className="text-lg md:text-xl tracking-[0.2em] uppercase font-light hover:text-slate-300 transition">
-        J.W. Holliday & Associates
-      </h2>
-    </a>
+            <a href="#about" className="hover:text-slate-300 transition">
+              About
+            </a>
 
-    {/* Desktop Menu */}
-    <div className="hidden md:flex gap-10 text-sm uppercase tracking-widest">
+            <a href="#industries" className="hover:text-slate-300 transition">
+              Industries
+            </a>
 
-      <a href="#practice-areas" className="hover:text-slate-300 transition">
-        Practice Areas
-      </a>
+            <a href="#contact" className="hover:text-slate-300 transition">
+              Contact
+            </a>
+          </div>
 
-      <a href="#about" className="hover:text-slate-300 transition">
-        About
-      </a>
+          {/* Mobile Hamburger */}
+          <button
+            className="md:hidden text-3xl"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            ☰
+          </button>
+        </nav>
 
-      <a href="#industries" className="hover:text-slate-300 transition">
-        Industries
-      </a>
+        {/* Mobile Dropdown */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-black/95 backdrop-blur-md text-white px-6 py-8 space-y-6 uppercase tracking-widest text-sm">
+            <a
+              href="#practice-areas"
+              className="block"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Practice Areas
+            </a>
 
-      <a href="#contact" className="hover:text-slate-300 transition">
-        Contact
-      </a>
+            <a
+              href="#about"
+              className="block"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About
+            </a>
 
-    </div>
+            <a
+              href="#industries"
+              className="block"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Industries
+            </a>
 
-    {/* Mobile Hamburger */}
-    <button
-      className="md:hidden text-3xl"
-      onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-    >
-      ☰
-    </button>
-
-  </nav>
-
-  {/* Mobile Dropdown */}
-  {mobileMenuOpen && (
-    <div className="md:hidden bg-black/95 backdrop-blur-md text-white px-6 py-8 space-y-6 uppercase tracking-widest text-sm">
-
-      <a
-        href="#practice-areas"
-        className="block"
-        onClick={() => setMobileMenuOpen(false)}
-      >
-        Practice Areas
-      </a>
-
-      <a
-        href="#about"
-        className="block"
-        onClick={() => setMobileMenuOpen(false)}
-      >
-        About
-      </a>
-
-      <a
-        href="#industries"
-        className="block"
-        onClick={() => setMobileMenuOpen(false)}
-      >
-        Industries
-      </a>
-
-      <a
-        href="#contact"
-        className="block"
-        onClick={() => setMobileMenuOpen(false)}
-      >
-        Contact
-      </a>
-
-    </div>
-  )}
-
-</header>
+            <a
+              href="#contact"
+              className="block"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </a>
+          </div>
+        )}
+      </header>
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-end bg-slate-950 text-white pb-12 md:pb-16">
+      <section className="relative min-h-screen flex items-end bg-slate-950 text-white pb-12 md:pb-16">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
 
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-[center_top] md:bg-center"
           style={{
             backgroundImage: "url('/images/hero-dallas-1.jpg')",
           }}
@@ -109,11 +103,11 @@ export default function Home() {
             Dallas, Texas
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-extralight leading-tight tracking-wide mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extralight leading-tight tracking-wide mb-6">
             J.W. Holliday & Associates P.C.
           </h1>
 
-          <p className="text-lg md:text-2xl text-slate-300 mb-10 font-light">
+          <p className="text-base sm:text-lg md:text-2xl text-slate-300 mb-10 font-light">
             Creditors’ Rights & Bankruptcy Counsel Since 1997
           </p>
 
@@ -128,7 +122,7 @@ export default function Home() {
 
       {/* Practice Areas */}
       <section id="practice-areas" className="py-24 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="mb-16 text-center">
             <p className="uppercase tracking-[0.3em] text-sm text-slate-500 mb-4">
               Practice Areas
@@ -192,9 +186,11 @@ export default function Home() {
           </div>
 
           {/* Right Side */}
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-8">
             <div className="border border-slate-800 p-8">
-              <h3 className="text-5xl font-light mb-4">1997</h3>
+              <h3 className="text-3xl xl:text-4xl font-light mb-4 leading-tight">
+                1997
+              </h3>
 
               <p className="text-slate-400 uppercase tracking-widest text-sm">
                 Established
@@ -202,7 +198,9 @@ export default function Home() {
             </div>
 
             <div className="border border-slate-800 p-8">
-              <h3 className="text-5xl font-light mb-4">Dallas</h3>
+              <h3 className="text-3xl xl:text-4xl font-light mb-4 leading-tight">
+                Dallas
+              </h3>
 
               <p className="text-slate-400 uppercase tracking-widest text-sm">
                 Texas Based
@@ -210,7 +208,9 @@ export default function Home() {
             </div>
 
             <div className="border border-slate-800 p-8">
-              <h3 className="text-5xl font-light mb-4">Creditor</h3>
+              <h3 className="text-3xl xl:text-4xl font-light mb-4 leading-tight">
+                Creditor
+              </h3>
 
               <p className="text-slate-400 uppercase tracking-widest text-sm">
                 Representation
@@ -218,7 +218,9 @@ export default function Home() {
             </div>
 
             <div className="border border-slate-800 p-8">
-              <h3 className="text-5xl font-light mb-4">Commercial</h3>
+              <h3 className="text-3xl xl:text-4xl font-light mb-4 leading-tight">
+                Commercial
+              </h3>
 
               <p className="text-slate-400 uppercase tracking-widest text-sm">
                 Litigation
@@ -230,7 +232,7 @@ export default function Home() {
 
       {/* Industries Section */}
       <section id="industries" className="bg-white py-28 px-6">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="mb-16 text-center">
             <p className="uppercase tracking-[0.3em] text-sm text-slate-500 mb-4">
               Industries Served
@@ -241,7 +243,8 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          {/* <div className="grid md:grid-cols-3 gap-6"> */}
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
             {[
               "Financial Institutions",
               "Commercial Lenders",
@@ -255,9 +258,10 @@ export default function Home() {
             ].map((industry) => (
               <div
                 key={industry}
-                className="border border-slate-200 p-8 hover:border-slate-900 transition"
+                className="border border-slate-200 p-8 flex items-center justify-center text-center hover:border-slate-900 hover:-translate-y-1 transition duration-300"
               >
-                <h3 className="text-2xl font-light text-slate-900">
+                {/* <h3 className="text-2xl font-light text-slate-900"> */}
+                <h3 className="text-xl font-light text-slate-900">
                   {industry}
                 </h3>
               </div>
