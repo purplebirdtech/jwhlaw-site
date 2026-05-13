@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -121,7 +122,14 @@ export default function Home() {
       </section>
 
       {/* Practice Areas */}
-      <section id="practice-areas" className="py-24 px-6 bg-white">
+      <motion.section
+        id="practice-areas"
+        className="py-24 px-6 bg-white"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         <div className="max-w-5xl mx-auto">
           <div className="mb-16 text-center">
             <p className="uppercase tracking-[0.3em] text-sm text-slate-500 mb-4">
@@ -156,10 +164,17 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* About Section */}
-      <section id="about" className="bg-slate-950 text-white py-28 px-6">
+      <motion.section
+  id="about"
+  className="bg-slate-950 text-white py-28 px-6"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.9 }}
+  viewport={{ once: true }}
+>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           {/* Left Side */}
           <div>
@@ -228,10 +243,17 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Industries Section */}
-      <section id="industries" className="bg-white py-28 px-6">
+      <motion.section
+  id="industries"
+  className="bg-white py-28 px-6"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1.0 }}
+  viewport={{ once: true }}
+>
         <div className="max-w-5xl mx-auto">
           <div className="mb-16 text-center">
             <p className="uppercase tracking-[0.3em] text-sm text-slate-500 mb-4">
@@ -268,10 +290,17 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-slate-950 text-white py-28 px-6">
+      <motion.section
+  id="contact"
+  className="bg-slate-950 text-white py-28 px-6"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1.1 }}
+  viewport={{ once: true }}
+>
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           {/* Left Side */}
           <div>
@@ -352,7 +381,7 @@ export default function Home() {
             </form>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
       <footer className="bg-black text-slate-500 py-10 px-6 border-t border-slate-900">
