@@ -156,10 +156,8 @@ or connect the GitHub repository directly to Vercel.
 
 ---
 
-## Author
+<!-- ## Author
 
-J.W. Holliday & Associates
+PurpleBird Tech
 
-Dallas, Texas
-
-National Bankruptcy & Creditors’ Rights Representation
+ -->
