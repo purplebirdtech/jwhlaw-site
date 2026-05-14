@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# J.W. Holliday & Associates Website
+
+A modern law firm website built with Next.js, React, Tailwind CSS, and Framer Motion.
+
+This project was designed to create a professional digital presence for J.W. Holliday & Associates, a Dallas-based law firm representing creditors, lenders, financial institutions, and commercial clients in bankruptcy, restructuring, creditors’ rights, and commercial litigation matters nationwide.
+
+---
+
+## Features
+
+- Modern responsive design
+- Fixed transparent glass-style navbar
+- Mobile responsive hamburger navigation
+- Framer Motion fade-in animations
+- Hero image section with cinematic layout
+- Practice Areas section
+- Experience section
+- Credentials section
+- Insights section
+- Contact section
+- Downloadable vCard contact file
+- LinkedIn footer integration
+- Responsive typography scaling
+- Editorial-style layout and spacing
+- Tailwind CSS utility styling
+
+---
+
+## Technologies Used
+
+- Next.js
+- React
+- Tailwind CSS
+- Framer Motion
+- JavaScript
+
+---
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and navigate to:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```text
+src/
+ └── app/
+      └── page.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+public/
+ ├── images/
+ └── jwh.vcf
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Main Sections
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Hero Section
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Features a full-screen Dallas skyline hero image with firm branding and firm overview messaging.
+
+### Practice Areas
+
+Highlights the firm’s bankruptcy and creditors’ rights practice areas.
+
+### About
+
+Overview of the firm’s experience, history, and representation focus.
+
+### Industries Served
+
+Lists industries and commercial sectors represented by the firm.
+
+### Experience
+
+Highlights nationwide bankruptcy and commercial representation experience.
+
+### Credentials
+
+Displays education, admissions, and practice focus information.
+
+### Insights
+
+Editorial-style legal and industry insights cards.
+
+### Contact
+
+Includes contact information, inquiry form, and downloadable vCard.
+
+---
+
+## Responsive Design
+
+The website is fully responsive and includes:
+
+- Desktop navigation
+- Mobile hamburger menu
+- Responsive typography
+- Responsive grid layouts
+- Mobile-friendly spacing and scaling
+
+---
+
+## Animations
+
+Framer Motion is used throughout the site for subtle fade-in and scroll animations.
+
+---
+
+## Future Improvements
+
+Planned future enhancements include:
+
+- Individual Insights article pages
+- Dynamic routing
+- SEO optimization
+- Metadata improvements
+- Attorney profile pages
+- Privacy policy page
+- Accessibility refinements
+- Expanded contact functionality
+- Backend contact form integration
+
+---
+
+## Deployment
+
+This project is intended for deployment on Vercel.
+
+Deploy using:
+
+```bash
+vercel
+```
+
+or connect the GitHub repository directly to Vercel.
+
+---
+
+## Author
+
+J.W. Holliday & Associates
+
+Dallas, Texas
+
+National Bankruptcy & Creditors’ Rights Representation
